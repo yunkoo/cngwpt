@@ -12,9 +12,9 @@ app.config(function($locationProvider,$httpProvider,$compileProvider) {
 });
 
 var transOrganizer=function(trans){
-    if(isAndroid){
-        trans="none";
-    }
+//    if(isAndroid){
+//        trans="none";
+//    }
     return trans;
 }
 
