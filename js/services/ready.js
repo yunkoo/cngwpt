@@ -9,6 +9,7 @@
 angular.module('btford.phonegap.ready', []).
   factory('phonegapReady', function ($rootScope) {
     return function (fn) {
+        if(document.location.protocol == "http:"){return fn}
       var queue = [];
 
       var impl = function () {

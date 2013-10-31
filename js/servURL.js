@@ -1,4 +1,4 @@
-var servURL="http://cngwpt.sqapp.cn/";
+var servURL="http://cnlssc.sqapp.cn/";
 
 /*
 * 1.修改服务器地址

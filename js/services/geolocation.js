@@ -11,7 +11,13 @@ angular.module('btford.phonegap.geolocation',
   factory('geolocation', function ($rootScope, phonegapReady) {
     return {
       getCurrentPosition: phonegapReady(function (onSuccess, onError, options) {
-        navigator.geolocation.getCurrentPosition(function () {
+          var options=options || {
+              frequency:5000,
+              enableHighAccuracy: true,
+              timeout: 10000,
+              maximumAge: 0
+          };
+          navigator.geolocation.getCurrentPosition(function () {
           var that = this,
             args = arguments;
             
@@ -23,7 +29,7 @@ angular.module('btford.phonegap.geolocation',
         }, function () {
           var that = this,
             args = arguments;
-            
+
           if (onError) {
             $rootScope.$apply(function () {
               onError.apply(that, args);
