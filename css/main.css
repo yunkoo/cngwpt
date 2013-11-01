@@ -13,7 +13,7 @@
 #mainpageTop{height: 49%;min-height: 210px}
 /*导航*/
 #pagemain .ui-panel-content-wrap{position: relative}
-#pagemain #mainContent{position: absolute;top:0;bottom: 0;left: 0;right: 0;}
+#pagemain #mainContent{position: absolute;padding:0;top:0;bottom: 0;left: 0;right: 0;}
 #navigator {height:50%;min-height: 210px;}
 #navigator .ui-block-a,
 #navigator .ui-block-b,
