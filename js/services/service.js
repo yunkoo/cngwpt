@@ -5,13 +5,13 @@ app.factory('fetchShopInfo', function(AJAX,$waitDialog){
                 url:appConfig.shop_get,
                 p:{'shopid':shopid},
                 bCall:function(){
-                    $waitDialog.show("正在获取店铺信息...");
+//                    $waitDialog.show("正在获取店铺信息...");
                 },
                 sCall:function(d){
                         if(typeof(callback)=="function"){callback(d);}
                 },
                 cCall:function(){
-                    $waitDialog.hide();
+//                    $waitDialog.hide();
                 }
             }
         );
