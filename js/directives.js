@@ -29,8 +29,8 @@ app.directive("appfooter", function($route) {
             var navName = 'nav1';
             scope.$on("$routeChangeSuccess", function (event, current, previous) {
                 $('.nav').removeClass("ui-btn-active");
-                navName=current.$$route.footerPointer;
-                if(navName){
+                if(current.$$route && ('footerPointer' in current.$$route)){
+                    navName=current.$$route.footerPointer;
                     setTimeout(function(){
                         $('.'+navName).addClass("ui-btn-active");
                     },300);
