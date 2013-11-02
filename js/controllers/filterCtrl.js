@@ -46,7 +46,7 @@ app.controller("filterCtrl", function ($scope,$routeParams,$pop,$waitDialog,$loc
                     }
                 },
                 eCall:function(){
-                    alert("获取商品分类失败")
+                    $pop.open("获取商品分类失败");
                 }
             });
         }
