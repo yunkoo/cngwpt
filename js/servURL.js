@@ -1,5 +1,5 @@
 var servURL="http://cngwpt.sqapp.cn/";
-//var servURL="http://192.168.1.2/yunkuApp/shop/";
+//var servURL="http://yk.no-ip.biz/yunkuApp/shop/";
 
 /*
 * 1.修改服务器地址
