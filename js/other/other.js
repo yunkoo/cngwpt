@@ -42,7 +42,8 @@ $(document).ready(function(){
                  if(data.status == "ok"){
                      var strHTML = '';
                      $.each(data.result, function(InfoIndex, Info) {
-                         strHTML += "<div class='swiper-slide' style='background:url("+servURL+Info["images_url"] +") no-repeat;'>" + "<a href='" +Info["images_link"] + "'></a></div>";
+                         var imgurl=servURL+Info["images_url"];
+                         strHTML += "<div class='swiper-slide' style='background:url("+imgurl+") no-repeat;'>" + "<a href='" +Info["images_link"] + "'></a></div>";
                      });
                      $(".swiper-wrapper").empty().html(strHTML);
                      df.resolve();
@@ -82,7 +83,16 @@ $(document).ready(function(){
                         loop: true,
                         tdFlow:threeDObj
                     }
+
                     window.template.mySwiper = container.swiper(options);
+
+
+
+                    var resetContainer=function(){
+                        container.width($("#mainContent").width());
+                    }
+
+                    resetContainer();
 
                     window.onresize=function(){
                         resetContainer();
@@ -90,7 +100,7 @@ $(document).ready(function(){
                     }
 
                 };
-                setTimeout(init,200);
+                setTimeout(init,0);
 
                 container.on("swiperight",function(evt){
                     evt.stopPropagation();
